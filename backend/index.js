@@ -28,9 +28,11 @@ app.use(authenticate)
 app.use("/api/users" , userRouter)
 app.use("/api/products" , productRouter)
 
+const PORT = process.env.PORT || 5000
+
 app.listen(
-    3000 ,
+    PORT ,
     ()=>{
-        console.log('Server started successfully on port 3000')
+        console.log(`Server started successfully on port ${PORT}`)
     }
 )
